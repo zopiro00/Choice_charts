@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Choice Apps</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<head>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10">
+                    <h1>CHOICE APP </h1> 
+                </div>
+                <div class="col-sm-2" id="fecha">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="button-container"></div>
+    <div>
+        <h2>Global</h2>
+    </div>
+    <div id="chart-container"></div>
+    <div>
+        <h2>Categories</h2>
+    </div>
+    <div id="linear-chart-container"></div>
+<script type="module">
+
+import define from "./index.js";
+import {Runtime, Library, Inspector} from "./runtime.js";
+
+const runtime = new Runtime();
+const main = runtime.module(define, Inspector.into(document.body));
+
+</script>
+</body>
